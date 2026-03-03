@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Café do Bairro — Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-home">
+  <header class="site-header" style="background: linear-gradient(90deg,#fff,#fff8f2);">
+    <div class="container-header">
+      <div class="brand" aria-label="Café do Bairro">
+        <img src="img/logo-cafe.webp" alt="Logo Café do Bairro" width="110">
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="order.html">Fazer Pedido</a>
+        <a href="menu.html">Cardápio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero caixa" aria-label="Destaque do café">
+      <div class="carousel" id="carousel" aria-label="Carrossel do Café">
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track" id="carousel-track">
+          <img src="img/coffee1.jpeg" alt="Cappuccino cremoso" class="carousel-item">
+          <img src="img/coffee2.jpeg" alt="Croissant e café" class="carousel-item">
+          <img src="img/coffee3.jpeg" alt="Mesa com bolo e café" class="carousel-item">
+        </div>
+        <button class="carousel-btn next" id="carousel-next" aria-label="Próximo">›</button>
+      </div>
+      <div class="carousel-controls">
+        <button id="carousel-play" class="btn">Pausar/Retomar</button>
+      </div>
+    </section>
+
+    <section class="caixa layout-flex" aria-label="Sobre o café">
+      <article>
+        <h1>Café do Bairro</h1>
+        <p>Bem-vindo ao Café do Bairro — cafés especiais, pães artesanais e um espaço aconchegante para sua pausa.</p>
+        <p>Use "Fazer Pedido" para agendar retirada ou delivery, e confira o cardápio com nossas opções.</p>
+      </article>
+
+      <aside class="side-card caixa" aria-label="Horário e promoções">
+        <h2>Horário</h2>
+        <p>Seg–Sex: 07:00–20:00<br>Sáb: 08:00–18:00<br>Dom: 08:00–14:00</p>
+        <h3>Promoção</h3>
+        <p>Combo Café + Croissant: R$12,90 (até 10h)</p>
+      </aside>
+    </section>
+
+    <section class="caixa" aria-label="Perguntas frequentes">
+      <h2>FAQ</h2>
+      <div class="accordion" id="faq" aria-label="Perguntas frequentes">
+        <div class="acc-item">
+          <button class="acc-trigger">Fazem delivery?</button>
+          <div class="acc-panel">Sim — delivery em um raio de 5km. Valor calculado no pedido.</div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger">Aceitam encomendas?</button>
+          <div class="acc-panel">Sim — bolos e cestas. Entre em contato pelo formulário para detalhes.</div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger">Como conservar meus pães?</button>
+          <div class="acc-panel">O ideal é em saco de papel em local seco; para maior conservação, congelar e aquecer antes de consumir.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="caixa grid-demo" aria-label="Galeria do café">
+      <h2>Galeria</h2>
+      <div class="galeria" aria-label="Miniaturas da galeria">
+        <img src="img/thumb1.jpeg" alt="Vitrine com pães" class="thumb" data-full="img/photo1.jpeg">
+        <img src="img/thumb2.jpeg" alt="Barista preparando café" class="thumb" data-full="img/photo2.jpeg">
+        <img src="img/thumb3.jpeg" alt="Ambiente do café" class="thumb" data-full="img/photo3.jpeg">
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé">
+    <p>Café do Bairro — Rua das Flores, 123 — (00) 90000-0000</p>
+    <img src="img/footer-decor.jpeg" alt="Xícara de café" width="100">
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Imagem ampliada">
+    <div class="modal-content">
+      <button id="modal-close" aria-label="Fechar imagem" class="btn secondary">Fechar</button>
+      <img id="modal-img" src="" alt="Imagem ampliada">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

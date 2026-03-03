@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Fazer Pedido — Café do Bairro</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    form#order-form { border:1px dashed var(--border); padding:12px; border-radius:8px; }
+  </style>
+</head>
+<body id="page-order">
+  <header class="site-header" style="background: linear-gradient(90deg,#fff,#fff8f2);">
+    <div class="container-header">
+      <div class="brand" aria-hidden="true">
+        <img src="img/logo-cafe.webp" alt="Logo Café do Bairro" width="90">
+      </div>
+      <nav aria-label="Navegação">
+        <a href="index.html">Início</a>
+        <a href="order.html">Fazer Pedido</a>
+        <a href="menu.html">Cardápio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="caixa" aria-label="Formulário de pedido">
+      <h1>Fazer Pedido</h1>
+      <form id="order-form" novalidate aria-label="Formulário de pedido">
+        <fieldset>
+          <legend>Dados do pedido</legend>
+
+          <label for="custName">Nome completo</label>
+          <input type="text" id="custName" name="custName" required>
+
+          <label for="custEmail">E-mail</label>
+          <input type="email" id="custEmail" name="custEmail" required>
+
+          <label for="custPhone">Telefone</label>
+          <input type="tel" id="custPhone" name="custPhone" required>
+
+          <label for="pickupDate">Data de retirada</label>
+          <input type="date" id="pickupDate" name="pickupDate" required>
+
+          <label for="pickupTime">Horário</label>
+          <input type="time" id="pickupTime" name="pickupTime" required>
+
+          <label for="item">Escolha o item</label>
+          <select id="item" name="item" required>
+            <option value="">-- escolha --</option>
+            <option value="cappuccino">Cappuccino</option>
+            <option value="latte">Latte</option>
+            <option value="croissant">Croissant</option>
+            <option value="bolo">Fatia de bolo</option>
+            <option value="pao">Pão artesanal</option>
+          </select>
+
+          <label for="qty">Quantidade</label>
+          <input type="number" id="qty" name="qty" min="1" max="50" value="1" required>
+
+          <label for="payment">Forma de pagamento</label>
+          <select id="payment" name="payment" required>
+            <option value="">-- escolha --</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="pix">PIX</option>
+            <option value="cartao">Cartão</option>
+          </select>
+
+          <label for="notes">Observações (ex.: sem lactose)</label>
+          <textarea id="notes" name="notes" rows="2"></textarea>
+
+          <label class="inline-label"><input type="checkbox" id="agree" name="agree" required> Confirmo que irei retirar o pedido</label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Enviar Pedido</button>
+            <button type="button" id="clear-orders" class="btn secondary">Limpar pedidos salvos</button>
+          </div>
+
+          <p id="order-msg" aria-live="polite"></p>
+        </fieldset>
+      </form>
+    </section>
+
+    <aside class="caixa side-card" aria-label="Pedidos salvos">
+      <h2>Pedidos salvos</h2>
+      <div id="saved-orders">Nenhum pedido salvo.</div>
+    </aside>
+  </main>
+
+  <footer aria-label="Rodapé">
+    <p>Café do Bairro — agradecemos sua preferência!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

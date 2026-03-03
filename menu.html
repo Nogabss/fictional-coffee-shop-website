@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Cardápio — Café do Bairro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-menu">
+  <header class="site-header" style="background: linear-gradient(90deg,#fff,#fff8f2);">
+    <div class="container-header">
+      <div class="brand" aria-hidden="true">
+        <img src="img/logo-cafe.webp" alt="Logo Café do Bairro" width="90">
+      </div>
+      <nav aria-label="Navegação">
+        <a href="index.html">Início</a>
+        <a href="order.html">Fazer Pedido</a>
+        <a href="menu.html">Cardápio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="caixa" aria-label="Cardápio">
+      <h1>Cardápio</h1>
+      <table id="menu-table" aria-label="Tabela de cardápio 5 por 5">
+        <caption>Itens e preços — Café do Bairro</caption>
+        <thead>
+          <tr>
+            <th>Item</th><th>Categoria</th><th>Porção</th><th>Preço</th><th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cappuccino</td><td>Bebida</td><td>300ml</td><td>R$8,50</td><td>Cremoso</td></tr>
+          <tr><td>Latte</td><td>Bebida</td><td>350ml</td><td>R$9,00</td><td>Leite vaporizado</td></tr>
+          <tr><td>Croissant</td><td>Salgado</td><td>1un</td><td>R$6,00</td><td>Recheio opcional</td></tr>
+          <tr><td>Bolo de cenoura</td><td>Doce</td><td>Fatia</td><td>R$7,50</td><td>Com cobertura</td></tr>
+          <tr><td>Pão integral</td><td>Salgado</td><td>Un</td><td>R$3,50</td><td>Assado na hora</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="3">Itens em destaque</td><td>—</td><td>Promoções pela manhã</td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="caixa grid-demo" aria-label="Galeria do cardápio">
+      <h2>Fotos do cardápio</h2>
+      <div class="galeria">
+        <img src="img/thumb1.jpeg" alt="Vitrine com pães" class="thumb" data-full="img/photo1.jpeg">
+        <img src="img/thumb2.jpeg" alt="Barista preparando café" class="thumb" data-full="img/photo2.jpeg">
+        <img src="img/thumb3.jpeg" alt="Bolo e fatia pronta" class="thumb" data-full="img/photo3.jpeg">
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé">
+    <p>Cardápio atualizado — aproveite!</p>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Imagem ampliada">
+    <div class="modal-content">
+      <button id="modal-close" aria-label="Fechar imagem" class="btn secondary">Fechar</button>
+      <img id="modal-img" src="" alt="Imagem ampliada">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
